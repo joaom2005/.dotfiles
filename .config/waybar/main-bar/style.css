@@ -1,43 +1,56 @@
+@import 'theme.css';
+
 * {
   min-height: 0;
   min-width: 0;
   font-family: Lexend, "JetBrainsMono NFP";
   font-size: 16px;
   font-weight: 600;
+
+  padding: 0;
+  margin: 0;
 }
 
 window#waybar {
   transition-property: background-color;
   transition-duration: 0.5s;
-  /* background-color: #1e1e2e; */
-  /* background-color: #181825; */
-  /* background-color: #11111b; */
   background-color: transparent;
-  /* background-color: rgba(24, 24, 37, 0.6); */
+
+  padding: 0;
+  margin: 0;
+  
+  margin-top: -2;
+  margin-bottom: -2;
+}
+
+#workspaces {
+  padding: 0.1rem 0.2rem;
+  margin: 0.4rem 0.25rem;
+  border-radius: 6px;
+  background-color: @surface0;
 }
 
 #workspaces button {
   padding: 0.3rem 0.6rem;
   margin: 0.4rem 0.25rem;
   border-radius: 6px;
-  /* background-color: #181825; */
-  background-color: #1e1e2e;
-  color: #cdd6f4;
+  background-color: @base;
+  color: @text;
 }
 
 #workspaces button:hover {
-  color: #1e1e2e;
-  background-color: #cdd6f4;
+  color: @base;
+  background-color: @text;
 }
 
 #workspaces button.active {
-  background-color: #1e1e2e;
-  color: #89b4fa;
+  background-color: @base;
+  color: @blue;
 }
 
 #workspaces button.urgent {
-  background-color: #1e1e2e;
-  color: #f38ba8;
+  background-color: @base;
+  color: @red;
 }
 
 #clock,
@@ -55,8 +68,7 @@ window#waybar {
   padding: 0.3rem 0.6rem;
   margin: 0.4rem 0.25rem;
   border-radius: 6px;
-  /* background-color: #181825; */
-  background-color: #1e1e2e;
+  background-color: @base;
 }
 
 #custom-keyboard{
@@ -64,16 +76,16 @@ window#waybar {
 }
 
 #mpris.playing {
-  color: #a6e3a1;
+  color: @green;
 }
 
 #mpris.paused {
-  color: #9399b2;
+  color: @overlay2;
 }
 
 #custom-sep {
   padding: 0px;
-  color: #585b70;
+  color: @surface2;
 }
 
 window#waybar.empty #window {
@@ -81,42 +93,42 @@ window#waybar.empty #window {
 }
 
 #cpu {
-  color: #94e2d5;
+  color: @teal;
 }
 
 #memory {
-  color: #cba6f7;
+  color: @mauve;
 }
 
 #clock {
-  color: #74c7ec;
+  color: @sapphire;
 }
 
 #clock.simpleclock {
-  color: #89b4fa;
+  color: @blue;
 }
 
 #window {
-  color: #cdd6f4;
+  color: @text;
 }
 
 #pulseaudio {
-  color: #b4befe;
+  color: @lavender;
 }
 
 #pulseaudio.muted {
-  color: #a6adc8;
+  color: @subtext0;
 }
 
 #custom-logo {
-  color: #89b4fa;
+  color: @blue;
 }
 
 #custom-power {
-  color: #f38ba8;
+  color: @red;
 }
 
 tooltip {
-  background-color: #181825;
-  border: 2px solid #89b4fa;
+  background-color: @mantle;
+  border: 2px solid @blue;
 }

@@ -54,7 +54,6 @@
     },
 
     "hyprland/workspaces": {
-      "on-click": "activate",
       "format": "{icon}",
       "persistent-workspaces": {
         "*": 6
@@ -64,8 +63,6 @@
         "8": "󰓓",
         "9": "",
         "10": "",
-        "11": "5",
-        "12": "6",
         "active": "",
         "default": ""
       },
@@ -138,9 +135,15 @@
       "tooltip": false
     },
 
-    "custom/power": {
+    "custom/power2": {
       "tooltip": false,
       "on-click": "wlogout -p layer-shell &",
+      "format": "⏻"
+    },
+
+    "custom/power": {
+      "tooltip": false,
+      "on-click": "syspower",
       "format": "⏻"
     },
 
@@ -170,12 +173,29 @@
     "passthrough": false,
     "fixed-center": true,
 
-    "modules-left": [
-      "hyprland/workspaces"
-    ],
-    "modules-center": [],
-    "modules-right": [
+    "modules-left": [],
+    "modules-center": [
+      "hyprland/workspaces",
       "clock#simpleclock"
-    ]
+    ],
+    "modules-right": [],
+
+    "hyprland/workspaces": {
+      "on-click": "activate",
+      "format": "{icon}",
+      "persistent-workspaces": {
+        "*": 6
+      },
+      "format-icons": {
+	      "1" : "",
+        "2" : "",
+	      "3" : "",
+        "active": "",
+        "default": ""
+      },
+      "all-outputs": false,
+      "disable-scroll": false,
+      "active-only": false
+    }
   }
 ]
